@@ -4,19 +4,29 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    
+}
+
+.area-list li a{
+    font-family: 'Merriweather', serif;
+}
+
+.areas{
+    font-size: 25px;
 }
 
 .featured-map {
-    padding: 100px 0;
+    padding: 0;
     position: relative;
+    z-index: 1
 }
 
 .container {
     width: 1400px;
     max-width: 100%;
-    margin: auto;
+    margin: 0px 100px 0px 100px;
     display: flex;
     gap: 80px;
     padding: 30px;
@@ -24,6 +34,9 @@ body {
 
 /* LEFT */
 .map-content {
+    z-index: 1;
+    margin-top: 220px;
+    margin-left: 37px;
     /* width: 40%; */
 }
 
@@ -34,7 +47,8 @@ body {
 }
 
 .map-content h2 {
-    font-size: 64px;
+    font-family: Merriweather;
+    font-size: 40px;
     margin: 10px 0 40px;
 }
 
@@ -44,6 +58,7 @@ body {
 
 .area-list li {
     margin-bottom: 18px;
+    padding-bottom: 20px;
 }
 
 .area-list a,
@@ -57,7 +72,7 @@ body {
     font-size: 36px;
      padding: 10px 20px;
      margin-bottom: 30px;
-     font-weight: lighter;
+     font-weight: bold;
 }
 
 .area-list a.active,
@@ -71,14 +86,24 @@ body {
     display: inline-block;
     margin-top: 40px;
     padding: 12px 28px;
-    border: 1px solid #0b4f6c;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
     text-decoration: none;
-    color: #0b4f6c;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #B09454;
+    color: #fff;
+    border-color: #B09454;
 }
 
 
 .map-base {
-    width: 1600px;
+    width: 900px;
     position: absolute;
     right: 0;
     z-index: -1;
@@ -105,35 +130,28 @@ body {
 
 .map-hover.active img {
     opacity: 1;
-}
+   filter: drop-shadow(0 0px 10px rgb(0, 0, 0))
 
-div#map9 {
-    right: 328px;
-    top: 135px;
-}
-
-div#map9 div {
-    position: absolute;
-    left: 42px;
-    width: 300px;
-    top: 100px;
 }
 
 div#map1 {
-    right: 335px;
-    top: 654px;
+    right: 180px;
+    top: 320px;
+}
+div#map1 img {
+    width: 100px;
 }
 
 div#map1 div {
     position: absolute;
-    top: 10px;
-    width: 300px;
-    left: 10px;
+    top: 60px;
+    width: 200px;
+    left: 50px;
 }
 
 div#map2 {
     right: 325px;
-    top: 397px;
+    top: 297px;
 }
 
 div#map2 div {
@@ -145,7 +163,7 @@ div#map2 div {
 
 div#map3 {
     right: 355px;
-    top: 428px;
+    top: 328px;
 }
 
 div#map3 div {
@@ -159,7 +177,7 @@ div#map3 div {
 
 div#map4 {
     right: 358px;
-    top: 1099px;
+    top: 999px;
 }
 
 div#map4 div {
@@ -171,7 +189,7 @@ div#map4 div {
 
 div#map7 {
     right: 486px;
-    top: 991px;
+    top: 891px;
 }
 
 div#map7 div {
@@ -184,7 +202,7 @@ div#map7 div {
 }
 div#map11 {
     right: 478px;
-    top: 936px;
+    top: 836px;
 }
 div#map11 div {
     position: absolute;
@@ -196,7 +214,7 @@ div#map11 div {
 }
 div#map5 {
     right: 370px;
-    top: 472px;
+    top: 372px;
 }
 div#map5 div {
     position: absolute;
@@ -206,8 +224,19 @@ div#map5 div {
     display: flex;
     flex-direction: row-reverse;
 }
+div#map9 {
+    right: 328px;
+    top: 35px;
+}
+
+div#map9 div {
+    position: absolute;
+    left: 42px;
+    width: 300px;
+    top: 100px;
+}
 div#map10 {
-    top: 879px;
+    top: 779px;
     right: 422px;
 }
 div#map10 div {
@@ -219,7 +248,7 @@ div#map10 div {
     right: 35px;
 }
 div#map8 {
-    top: 1008px;
+    top: 908px;
     right: 457px;
 }
 div#map8 div {
@@ -230,7 +259,7 @@ div#map8 div {
 }
 div#map6 {
     position: absolute;
-    top: 655px;
+    top: 555px;
     right: 353px;
 }
 div#map6 div{
